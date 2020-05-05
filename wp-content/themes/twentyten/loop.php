@@ -145,7 +145,21 @@ while ( have_posts() ) :
 
 		<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<div class="entry-summary">
-				<?php the_excerpt(); ?>
+                <?php
+                /**
+                 * jim 2020-05-01
+                 * if there is an image in the first 200 characters of the content, display it
+                 *
+                 */
+                $content = get_the_content();
+                if (strpos($content, '<img') !== false && strpos($content, '<img') < 200) {
+                    echo $content;
+                } else {
+                    the_excerpt();
+                }
+                ?>
+
+
 			</div><!-- .entry-summary -->
 	<?php else : ?>
 			<div class="entry-content">

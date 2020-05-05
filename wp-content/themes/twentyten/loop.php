@@ -64,7 +64,7 @@ while ( have_posts() ) :
 
 	<?php if ( ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) || in_category( _x( 'gallery', 'gallery category slug', 'twentyten' ) ) ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark">XX<?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
 				<?php twentyten_posted_on(); ?>
@@ -137,7 +137,7 @@ while ( have_posts() ) :
 
 	<?php else : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark">YY<?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
 				<?php twentyten_posted_on(); ?>
